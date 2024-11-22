@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,143 +7,124 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0d0d2b;
-    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle, #020c65, #004e92); /* Starry sky background */
+  
 }
+header{
+    background: rgba(0, 0, 0, 0.8);
 
-
-header {
+}
+/* Navigation Bar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1em 2em;
     background: rgba(0, 0, 0, 0.8);
+    color: #fff;
 }
 
-header h1 {
-    font-size: 2em;
-}
-
-nav ul {
+.nav-links {
+    list-style: none;
     display: flex;
-    list-style: none;
 }
 
-nav ul li {
-    margin-left: 20px;
+.nav-links li {
+    margin: 0 1em;
+    position: relative;
+    overflow: hidden;
 }
 
-nav ul li a {
-    color: #fff;
+.nav-links a {
     text-decoration: none;
-    font-size: 1.2em;
-}
-
-/* about Section */
-.about {
-    background-image: url('./media/0a8dc4cb803a177a51d1a5385d2260db.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
-    text-align:left
-}
-
-.about h2 {
-    
-    font-size: 3em;
-}
-
-.about p {
-    font-size: 1.2em;
-    margin: px 0;
-}
-.about button {
-    background-color: #6a1b9a;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-/* Content Sections */
-.managment {
-    padding: 40px 20px;
-    text-align: center;
-    
-}
-
-.managment h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.managment p {
-    font-size: 1.2em;
-margin-bottom: 10px;
-}
-
-
-.managment .btn{
-    padding: 10px;
-    margin-left: 15px;
-    margin-bottom: 20px;
-}
-
-.managment .btn:hover {
-    padding: auto;
-    background-color: #4527a0;
-    color: #fff;
-    transition: background-color 0.3s ease;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em 0.8em;
     transition: color 0.3s ease;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-.event-card, .photo-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    color: #fff;
 }
 
-/* Footer */
-footer {
-    padding: 20px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8);
-    font-size: 0.8em;
-}
-.footer {
-    position: fixed;
-    left: 0;
+/* Hover Animation Effect */
+.nav-links a::before {
+    content: "";
+    position: absolute;
     bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    background-color: #ff9900;
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::before {
     width: 100%;
-    background-color: #333;
-    color: #fff;
+}
+
+.nav-links a:hover {
+    color: #ff9900;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 1.5em;
+    position: relative;
+    padding-left: 40px; /* Adjust padding to make space for the image */
+    background: url('./medea/tel8.jpg') no-repeat left center;
+    background-size: 30px 30px; /* Adjust size of the image */
+    color: white;
+    
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
-    padding: 20px 0;
-  }
-  
-  
-  .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-links {
-    list-style: none;
-    padding: 10px 0;
+    color: #fff;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.btn {
+    background-color: #7b3cb9;
+    color: white;
+    text-decoration: none;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.action-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
-  }
-  
-  .footer-links a {
-    color: #fff;
+    margin-top: 2em;
+}
+
+.action-btn {
+    margin: 0 1em;
+    padding: 1em 2em;
+    background-color: #00274d;
+    color: white;
     text-decoration: none;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #00509e;
+}
